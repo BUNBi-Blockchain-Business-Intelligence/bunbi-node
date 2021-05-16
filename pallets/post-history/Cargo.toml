@@ -2,7 +2,7 @@
 name = 'pallet-post-history'
 version = '0.6.0'
 authors = ['Bunbi']
-edition = '2021'
+edition = '2018'
 license = 'GPL-3.0-only'
 homepage = 'https://bunbi.com.mx'
 repository = 'https://github.com/BUNBi-Blockchain-Business-Intelligence/bunbi-node'

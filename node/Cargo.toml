@@ -26,7 +26,7 @@ structopt = '0.3.8'
 hex-literal = '0.3.1'
 
 # Local dependencies
-subsocial-runtime = { path = '../runtime' }
+bunbi-runtime = { path = '../runtime' }
 
 # Substrate dependencies
 frame-benchmarking = '2.0.1'

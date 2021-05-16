@@ -1,0 +1,58 @@
+[package]
+name = 'pallet-session-keys'
+version = '0.6.0'
+authors = ['Bunbi']
+edition = '2021'
+license = 'GPL-3.0-only'
+homepage = 'https://bunbi.com.mx'
+repository = 'https://github.com/BUNBi-Blockchain-Business-Intelligence/bunbi-node'
+description = 'session keys pallet'
+keywords = ['blockchain', 'cryptocurrency', 'social-network', 'news-feed', 'marketplace']
+categories = ['cryptography::cryptocurrencies']
+
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
+
+[features]
+default = ['std']
+std = [
+    'serde',
+    'codec/std',
+    'frame-support/std',
+    'frame-system/std',
+    'pallet-transaction-payment/std',
+    'sp-runtime/std',
+    'sp-std/std',
+    'pallet-profile-follows/std',
+    'pallet-utils/std',
+]
+
+[dependencies.codec]
+default-features = false
+features = ['derive']
+package = 'parity-scale-codec'
+version = '1.3.4'
+
+[dependencies]
+serde = { features = ['derive'], optional = true, version = '1.0.119' }
+
+# Local dependencies
+pallet-profile-follows = { default-features = false, path = '../profile-follows' }
+pallet-utils = { default-features = false, path = '../utils' }
+
+# Substrate dependencies
+frame-support = { default-features = false, version = '2.0.1' }
+frame-system = { default-features = false, version = '2.0.1' }
+pallet-transaction-payment = { default-features = false, version = '2.0.1' }
+sp-runtime = { default-features = false, version = '2.0.1' }
+sp-std = { default-features = false, version = '2.0.1' }
+
+[dev-dependencies]
+# Local dependencies
+pallet-profiles = { default-features = false, path = '../profiles' }
+
+# Substrate dependencies
+pallet-balances = { default-features = false, version = '2.0.1' }
+pallet-timestamp = { default-features = false, version = '2.0.1' }
+sp-core = { default-features = false, version = '2.0.1' }
+sp-io = { default-features = false, version = '2.0.1' }

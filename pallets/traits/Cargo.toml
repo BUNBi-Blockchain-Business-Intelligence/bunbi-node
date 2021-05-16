@@ -1,0 +1,29 @@
+[package]
+name = 'df-traits'
+version = '0.6.0'
+authors = ['Bunbi']
+edition = '2021'
+license = 'GPL-3.0-only'
+homepage = 'https://bunbi.com-mx'
+repository = 'https://github.com/BUNBi-Blockchain-Business-Intelligence/bunbi-node'
+description = 'Common traits for Subsocial pallets'
+keywords = ['blockchain', 'cryptocurrency', 'social-network', 'news-feed', 'marketplace']
+categories = ['cryptography::cryptocurrencies']
+
+[features]
+default = ['std']
+std = [
+    'sp-runtime/std',
+    'frame-support/std',
+    'pallet-permissions/std',
+    'pallet-utils/std'
+]
+
+[dependencies]
+# Local dependencies
+pallet-permissions = { default-features = false, path = '../permissions' }
+pallet-utils = { default-features = false, path = '../utils' }
+
+# Substrate dependencies
+frame-support = { default-features = false, version = '2.0.1' }
+sp-runtime = { default-features = false, version = '2.0.1' }

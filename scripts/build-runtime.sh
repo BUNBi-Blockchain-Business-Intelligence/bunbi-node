@@ -2,4 +2,4 @@
 
 set -e
 
-cargo build --release -p subsocial-runtime
+cargo build --release -p bunbi-runtime

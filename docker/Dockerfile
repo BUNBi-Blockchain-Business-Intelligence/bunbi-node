@@ -14,7 +14,7 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
         cargo build --release
 
 FROM phusion/baseimage:0.11
-LABEL maintainer "dappforce@pm.me"
+
 
 COPY --from=builder /bunbisocial/target/release/bunbi-node /usr/local/bin
 

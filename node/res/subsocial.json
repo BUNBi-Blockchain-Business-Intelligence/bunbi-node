@@ -1,19 +1,14 @@
 {
-  "name": "Bunbisocial",
-  "id": "bunbisocial",
+  "name": "Bunbi network",
+  "id": "bunbinetwork",
   "chainType": "Live",
   "bootNodes": [],
-  "telemetryEndpoints": [
-    [
-      "/dns/telemetry.polkadot.io/tcp/443/x-parity-wss/%2Fsubmit%2F",
-      0
-    ]
-  ],
+  "telemetryEndpoints": null,
   "protocolId": "sub",
   "properties": {
     "ss58Format": 28,
     "tokenDecimals": 12,
-    "tokenSymbol": "SMN"
+    "tokenSymbol": "BNC"
   },
   "consensusEngine": null,
   "genesis": {

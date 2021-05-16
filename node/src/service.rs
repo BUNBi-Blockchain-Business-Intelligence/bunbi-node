@@ -14,8 +14,8 @@ use sc_finality_grandpa::{FinalityProofProvider as GrandpaFinalityProofProvider,
 // Our native executor instance.
 native_executor_instance!(
 	pub Executor,
-	subsocial_runtime::api::dispatch,
-	subsocial_runtime::native_version,
+	bunbi_runtime::api::dispatch,
+	bunbi_runtime::native_version,
 	frame_benchmarking::benchmarking::HostFunctions,
 );
 

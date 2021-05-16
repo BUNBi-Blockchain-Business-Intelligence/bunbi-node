@@ -1,5 +1,5 @@
 use sp_core::{Pair, Public, sr25519, crypto::UncheckedInto};
-use subsocial_runtime::{
+use bunbi_runtime::{
 	AccountId, AuraConfig, BalancesConfig,
 	GenesisConfig, GrandpaConfig, UtilsConfig,
 	SudoConfig, SpacesConfig, SystemConfig,

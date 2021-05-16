@@ -4,7 +4,7 @@ use crate::{chain_spec, service};
 use crate::cli::{Cli, Subcommand};
 use sc_cli::{SubstrateCli, RuntimeVersion, Role, ChainSpec};
 use sc_service::PartialComponents;
-use subsocial_runtime::Block;
+use bunbi_runtime::Block;
 
 impl SubstrateCli for Cli {
     fn impl_name() -> String {

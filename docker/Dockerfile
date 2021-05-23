@@ -1,11 +1,12 @@
 FROM phusion/baseimage:0.11 as builder
 LABEL maintainer "admin@bunbi.com.mx"
 
-WORKDIR /bunbi
+WORKDIR /bunbisocial
 
-COPY . /bunbi
+COPY . /bunbisocial
 
 RUN apt-get update && \
+	apt-get upgrade -y && \
 	apt-get install -y cmake pkg-config libssl-dev git clang
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
         export PATH=$PATH:$HOME/.cargo/bin && \
@@ -15,19 +16,19 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
 FROM phusion/baseimage:0.11
 
 
-COPY --from=builder /bunbi/target/release/bunbi-node /usr/local/bin
+COPY --from=builder /bunbisocial/target/release/bunbi-node /usr/local/bin
 
 RUN mv /usr/share/ca* /tmp && \
 	rm -rf /usr/share/*  && \
 	mv /tmp/ca-certificates /usr/share/ && \
 	rm -rf /usr/lib/python* && \
-	useradd -m -u 1000 -U -s /bin/sh -d /bunbi bunbi && \
-	mkdir -p /bunbi/.local/share/bunbi-node && \
-	chown -R bunbi:bunbi /bunbi/.local && \
-	ln -s /bunbi/.local/share/bunbi-node /data && \
+	useradd -m -u 1000 -U -s /bin/sh -d /bunbisocial bunbisocial && \
+	mkdir -p /bunbisocial/.local/share/bunbi-node && \
+	chown -R bunbisocial:bunbisocial /bunbisocial/.local && \
+	ln -s /bunbisocial/.local/share/bunbi-node /data && \
 	rm -rf /usr/bin /usr/sbin
 
-USER bunbi
+USER bunbisocial
 EXPOSE 30333 9933 9944
 VOLUME ["/data"]
 

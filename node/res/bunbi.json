@@ -1,5 +1,5 @@
 {
-  "name": "Bunbinetwork",
+  "name": "Bunbi network",
   "id": "bunbinetwork",
   "chainType": "Live",
   "bootNodes": [],
@@ -8,7 +8,7 @@
   "properties": {
     "ss58Format": 28,
     "tokenDecimals": 12,
-    "tokenSymbol": "BBU"
+    "tokenSymbol": "BNC"
   },
   "consensusEngine": null,
   "genesis": {

@@ -49,5 +49,3 @@ fs.writeFileSync(
   JSON.stringify(allTypes, null, 2),
   'utf8'
 );
-
-//--rpc-external --ws-external

@@ -1,23 +1,4 @@
-// This file is part of Substrate.
 
-// Copyright (C) 2017-2021 Parity Technologies (UK) Ltd.
-// SPDX-License-Identifier: Apache-2.0
-
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// 	http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-//! MultiAddress type is a wrapper for multiple downstream account formats.
-//! Copied from `sp_runtime::multiaddress`, and can be removed and replaced when
-//! updating to a newer version of Substrate.
 
 use codec::{Encode, Decode, Codec};
 use sp_std::{vec::Vec, marker::PhantomData, fmt::Debug};

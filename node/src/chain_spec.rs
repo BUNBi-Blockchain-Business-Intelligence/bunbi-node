@@ -115,15 +115,15 @@ pub fn local_testnet_config() -> Result<ChainSpec, String> {
 }
 
 pub fn subsocial_config() -> Result<ChainSpec, String> {
-	ChainSpec::from_json_bytes(&include_bytes!("../res/subsocial.json")[..])
+	ChainSpec::from_json_bytes(&include_bytes!("../res/bunbi.json")[..])
 }
 
 pub fn subsocial_staging_config() -> Result<ChainSpec, String> {
     let wasm_binary = WASM_BINARY.ok_or("Staging wasm binary not available".to_string())?;
 
     Ok(ChainSpec::from_genesis(
-        "Subsocial",
-        "subsocial",
+        "Bunbinetwork",
+        "bunbinetwork",
         ChainType::Live,
         move || testnet_genesis(
             wasm_binary,

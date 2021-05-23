@@ -8,7 +8,7 @@
   "properties": {
     "ss58Format": 28,
     "tokenDecimals": 10,
-    "tokenSymbol": "BNC"
+    "tokenSymbol": "BBU"
   },
   "consensusEngine": null,
   "genesis": {

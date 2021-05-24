@@ -7,7 +7,7 @@ services:
     restart: on-failure
     volumes:
       - chain_data:/data
-    command: ./bunbi-node
+    command: /usr/local/bin/bunbi-node
       --wasm-execution Compiled
       --db-cache 1024
       --rpc-cors "*"

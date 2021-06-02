@@ -18,7 +18,7 @@ use frame_support::traits::Currency;
 pub use pallet_transaction_payment::{Multiplier, TargetedFeeAdjustment};
 
 // TODO: replace with imported constants from Runtime
-pub const SMNS: Balance = 1_000_000_000_000;
+pub const SMNS: Balance = 21_000_000;
 pub const DOLLARS: Balance = SMNS;             // 1_000_000_000_000
 pub const CENTS: Balance = DOLLARS / 100;      // 10_000_000_000
 pub const MILLICENTS: Balance = CENTS / 1_000; // 10_000_000

@@ -13,7 +13,7 @@ use sc_telemetry::TelemetryEndpoints;
 use hex_literal::hex;
 
 // The URL for the telemetry server.
-const STAGING_TELEMETRY_URL: &str = "wss://telemetry.polkadot.io/submit/";
+//const STAGING_TELEMETRY_URL: &str = "wss://telemetry.polkadot.io/submit/";
 const DEFAULT_PROTOCOL_ID: &str = "sub";
 
 /// Specialized `ChainSpec`. This is a specialization of the general Substrate ChainSpec type.
@@ -180,10 +180,13 @@ pub fn subsocial_staging_config() -> Result<ChainSpec, String> {
             true,
         ),
         vec![],
+        /*
         Some(TelemetryEndpoints::new(
             vec![(STAGING_TELEMETRY_URL.to_string(), 0)]
-        ).expect("Staging telemetry url is valid; qed")),
-        Some(DEFAULT_PROTOCOL_ID),
+        ).expect("Staging telemetry url is valid; qed")),*/
+        None,
+        None,
+        //Some(DEFAULT_PROTOCOL_ID),
         Some(subsocial_properties()),
         None,
     ))

@@ -101,9 +101,12 @@ pub mod opaque {
 pub const VERSION: RuntimeVersion = RuntimeVersion {
 	spec_name: create_runtime_str!("bunbinetwork"),
 	impl_name: create_runtime_str!("bunbinetwork"),
-	authoring_version: 0,
-	spec_version: 10,
-	impl_version: 0,
+	//0
+	authoring_version: 1,
+	//10
+	spec_version: 100,
+	//0
+	impl_version: 1,
 	apis: RUNTIME_API_VERSIONS,
 	transaction_version: 2,
 };

@@ -7,6 +7,6 @@ echo "It will take a long time. Project will be built twice..."
 cargo build --release
 
 ./target/release/bunbi-node build-spec --disable-default-bootnode --chain staging > ./node/res/customSpec.json
-./target/release/bunbi-node build-spec --chain=./node/res/customSpec.json --raw --disable-default-bootnode > ./node/res/bunbi.json
+./target/release/bunbi-node build-spec --chain=./node/res/customSpec.json --raw --disable-default-bootnode > ./node/res/bunbinetwork.json
 
 cargo build --release

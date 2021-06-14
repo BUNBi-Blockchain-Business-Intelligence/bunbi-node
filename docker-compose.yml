@@ -16,6 +16,7 @@ services:
       --validator
       --telemetry-url "wss://telemetry.polkadot.io/submit/ 0"
       --bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWJYMksKfWMhBasGmmbgT41HFpCKNuebX9zMH9wR8RkbjV
+      --ws-external
 
 volumes:
   chain_data:

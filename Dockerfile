@@ -28,7 +28,8 @@ RUN mv /usr/share/ca* /tmp && \
 	rm -rf /usr/bin /usr/sbin
 
 USER bunbi
-EXPOSE 30333 9933 9944
+EXPOSE 30333 9933 9944 9333 9945
 VOLUME ["/data"]
+
 
 CMD ["/usr/local/bin/bunbi-node"]

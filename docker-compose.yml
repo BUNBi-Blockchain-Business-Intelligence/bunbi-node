@@ -9,16 +9,19 @@ services:
       - chain_data:/data
     command: /usr/local/bin/bunbi-node
       --wasm-execution Compiled
+      --base-path /tmp/node01
+      --chain ./customSpec.json
+      --name MyNode01
       --db-cache 1024
       --rpc-cors "*"
       --port 30333
-      --ws-port 9333
+      --ws-port 9945
+      --rpc-port 9933 
       --validator
-      --telemetry-url "wss://telemetry.polkadot.io/submit/ 0"
+      --rpc-methods Unsafe 
       --bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWJYMksKfWMhBasGmmbgT41HFpCKNuebX9zMH9wR8RkbjV
       --ws-external
 
 volumes:
   chain_data:
     driver: local
-

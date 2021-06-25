@@ -32,4 +32,4 @@ EXPOSE 30333 9933 9944 9333 9945
 VOLUME ["/data"]
 
 
-CMD ["/usr/local/bin/bunbi-node"]
+CMD ["/usr/local/bin/bunbi-node --dev --temp"]

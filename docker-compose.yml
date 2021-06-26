@@ -2,7 +2,7 @@
 version: "3"
 services:
   bunbi:
-    image: bunbi/bunbi-node:v1.0.1
+    image: bunbi/node-test:test
     network_mode: "host"
     restart: on-failure
     volumes:

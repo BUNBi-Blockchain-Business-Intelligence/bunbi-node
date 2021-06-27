@@ -16,6 +16,8 @@ services:
       --rpc-port 9933
       --node-key 0000000000000000000000000000000000000000000000000000000000000001
       --validator
+      --rpc-methods Unsafe 
+      --ws-external
 
 volumes:
   chain_data:

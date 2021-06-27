@@ -2,24 +2,20 @@
 version: "3"
 services:
   bunbi:
-    image: bunbi/bunbi-node:v1.0.1
+    image: bunbi/dev:dev
     network_mode: "host"
     restart: on-failure
     volumes:
       - chain_data:/data
     command: /usr/local/bin/bunbi-node
       --wasm-execution Compiled
-      --base-path /tmp/node01
-      --chain ./customSpec.json
-      --name MyNode01
+      --dev
       --db-cache 1024
       --rpc-cors "*"
       --port 30333
       --ws-port 9945
       --rpc-port 9933 
-      --validator
       --rpc-methods Unsafe 
-      --bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWJYMksKfWMhBasGmmbgT41HFpCKNuebX9zMH9wR8RkbjV
       --ws-external
 
 volumes:

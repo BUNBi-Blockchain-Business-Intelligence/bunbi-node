@@ -14,7 +14,7 @@ use hex_literal::hex;
 
 // The URL for the telemetry server.
 //const STAGING_TELEMETRY_URL: &str = "wss://telemetry.polkadot.io/submit/";
-const DEFAULT_PROTOCOL_ID: &str = "sub";
+const DEFAULT_PROTOCOL_ID: &str = "bunbi";
 
 /// Specialized `ChainSpec`. This is a specialization of the general Substrate ChainSpec type.
 pub type ChainSpec = sc_service::GenericChainSpec<GenesisConfig>;
@@ -122,9 +122,9 @@ pub fn subsocial_staging_config() -> Result<ChainSpec, String> {
     let wasm_binary = WASM_BINARY.ok_or("Staging wasm binary not available".to_string())?;
 
     Ok(ChainSpec::from_genesis(
-        "Bunbinetwork",
-        "bunbinetwork",
-        ChainType::Live,
+        "Bunbi",
+        "bunbi",
+        ChainType::Custom(String::from("bunbi")),
         move || testnet_genesis(
             wasm_binary,
             vec![

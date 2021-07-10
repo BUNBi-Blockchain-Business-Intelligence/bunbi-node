@@ -9,13 +9,16 @@ RUN apt-get update && \
 	apt-get install -y cmake pkg-config libssl-dev git clang
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
         export PATH=$PATH:$HOME/.cargo/bin && \
-        scripts/init.sh && \
+		rustup update nightly-2021-03-15 && \
+		rustup update && \
+		rustup target add wasm32-unknown-unknown --toolchain nightly-2021-03-15 && \
         cargo build --release
 
 FROM phusion/baseimage:0.11
 
 
 COPY --from=builder /bunbi/target/release/bunbi-node /usr/local/bin
+COPY customSpec.json /usr/local/bin
 
 RUN mv /usr/share/ca* /tmp && \
 	rm -rf /usr/share/*  && \
